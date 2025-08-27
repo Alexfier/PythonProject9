@@ -7,12 +7,12 @@ from catalog.models import Product
 
 class ProductListView(ListView):
     model = Product
-    template_name = "product_list.html"
+    template_name = "catalog/products_list.html"
 
 
 class ProductDetailView(DetailView):
     model = Product
-    template_name = 'product_detail.html'
+    template_name = 'catalog/product_details.html'
 
 
 # def product_detail(request, pk):
