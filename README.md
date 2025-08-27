@@ -1,16 +1,12 @@
-"""
-ASGI config for config project.
+Название проекта: Интернет-магазин
+Описание
+Этот проект представляет собой интернет-магазин, который позволяет пользователям просматривать товары, добавлять их в корзину и оформлять заказы. Магазин предлагает удобный интерфейс и множество функций для улучшения пользовательского опыта.
 
-It exposes the ASGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/4.2/howto/deployment/asgi/
-"""
-
-import os
-
-from django.core.asgi import get_asgi_application
-
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
-
-application = get_asgi_application()
+Функциональные возможности
+Просмотр товаров: Пользователи могут просматривать доступные товары с фильтрацией по категориям.
+Контакты: Пользователи могут всегда обратиться, по интересующим их вопросам, позвонив по телефону или заполнив форму для обратной связи.
+Технологии
+Frontend: HTML, CSS, JavaScript (или используемые библиотеки/фреймворки, например, React, Vue.js)
+Backend: Node.js, Express (или другой используемый серверный фреймворк)
+База данных: MongoDB, PostgreSQL (или другая используемая СУБД)
+Дополнительные технологии: Redis (для кэширования), Docker (для контейнеризации), и т.д.

@@ -1,21 +1,22 @@
-from django.db import models
+#!/usr/bin/env python
+"""Django's command-line utility for administrative tasks."""
+import os
+import sys
 
 
+def main():
+    """Run administrative tasks."""
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
+    try:
+        from django.core.management import execute_from_command_line
+    except ImportError as exc:
+        raise ImportError(
+            "Couldn't import Django. Are you sure it's installed and "
+            "available on your PYTHONPATH environment variable? Did you "
+            "forget to activate a virtual environment?"
+        ) from exc
+    execute_from_command_line(sys.argv)
 
 
-class Material(models.Model):
-    title = models.CharField(max_length=100, verbose_name='Заголовок',)
-    slug = models.CharField(max_length=100, blank=True, null= True, verbose_name='Slug',)
-    body = models.TextField(blank=True, null=True, verbose_name='Содержимое',)
-    image = models.ImageField(upload_to='catalog/', blank=True, null= True, verbose_name='Изображение',)
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания',)
-    publication = models.BooleanField(default=True, verbose_name='Опубликовано',)
-    views_count = models.IntegerField(default=0, verbose_name='просмотров',)
-
-    def __str__(self):
-        return f'{self.title}, {self.slug}'
-
-
-    class Meta:
-        verbose_name = 'Cтатья'
-        verbose_name_plural = 'Статьи'
+if __name__ == "__main__":
+    main()
