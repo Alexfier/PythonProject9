@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 import os
 from dotenv import load_dotenv
 from pathlib import Path
+from django.conf.urls.static import static
+from config import settings
 
 load_dotenv(override=True)
 

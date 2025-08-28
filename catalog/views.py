@@ -8,12 +8,12 @@ from catalog.models import Product
 class ProductListView(ListView):
     model = Product
     template_name = "catalog/products_list.html"
-
+    context_object_name = "products"
 
 class ProductDetailView(DetailView):
     model = Product
     template_name = 'catalog/product_details.html'
-
+    context_object_name = "product"
 
 # def product_detail(request, pk):
 #     product = get_object_or_404(Product, pk=pk)
